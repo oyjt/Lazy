@@ -3,6 +3,8 @@
 #这个是我自己收集整理的一些常用的工具类
 ##有好的工具类，欢迎提交PR
 ### 作者微博: [@海淀区小鬼风尘](http://weibo.com/2675061813/profile?topnav=1&wvr=6)
+###  QQ群欢迎大家加入：391513287
+
 
 [![License](https://img.shields.io/badge/license-Apache%202-green.svg)](https://www.apache.org/licenses/LICENSE-2.0)
 [![Maven Central](https://img.shields.io/bintray/v/gcssloop/maven/sutil.svg)](https://bintray.com/gcssloop/maven/sutil/view)
@@ -29,7 +31,7 @@
   [FileUtils](https://github.com/l123456789jy/Lazy/blob/master/lazylibrary/src/main/java/com/github/lazylibrary/util/FileUtils.java)| 文件操作
   [HanziToPinyin](https://github.com/l123456789jy/Lazy/blob/master/lazylibrary/src/main/java/com/github/lazylibrary/util/HanziToPinyin.java)| 拼音汉字处理
   [IOUtils](https://github.com/l123456789jy/Lazy/blob/master/lazylibrary/src/main/java/com/github/lazylibrary/util/IOUtils.java)| IOUtils
-  [MD5](https://github.com/l123456789jy/Lazy/blob/master/lazylibrary/src/main/java/com/github/lazylibrary/util/IOUtils.java)| MD5
+  [MD5](https://github.com/l123456789jy/Lazy/blob/master/lazylibrary/src/main/java/com/github/lazylibrary/util/MD5.java)| MD5
   [MiscUtils](https://github.com/l123456789jy/Lazy/blob/master/lazylibrary/src/main/java/com/github/lazylibrary/util/MiscUtils.java)| 设备信息的获取
   [NetWorkUtils](https://github.com/l123456789jy/Lazy/blob/master/lazylibrary/src/main/java/com/github/lazylibrary/util/NetWorkUtils.java)| 网络状态
   [PhoneUtil](https://github.com/l123456789jy/Lazy/blob/master/lazylibrary/src/main/java/com/github/lazylibrary/util/PhoneUtil.java)| 手机组件调用工具类
@@ -39,7 +41,7 @@
   [SerializeUtils](https://github.com/l123456789jy/Lazy/blob/master/lazylibrary/src/main/java/com/github/lazylibrary/util/SerializeUtils.java)| Serialize
   [ShellUtils](https://github.com/l123456789jy/Lazy/blob/master/lazylibrary/src/main/java/com/github/lazylibrary/util/ShellUtils.java)| shell指令
   [ShortCutUtils](https://github.com/l123456789jy/Lazy/blob/master/lazylibrary/src/main/java/com/github/lazylibrary/util/ShortCutUtils.java)| 创建删除快捷图标
- [SingletonUtils](https://github.com/l123456789jy/Lazy/blob/master/lazylibrary/src/main/java/com/github/lazylibrary/util/SingletonUtils.java)| 单利工具
+ [SingletonUtils](https://github.com/l123456789jy/Lazy/blob/master/lazylibrary/src/main/java/com/github/lazylibrary/util/SingletonUtils.java)| 单例工具
  [SizeUtils](https://github.com/l123456789jy/Lazy/blob/master/lazylibrary/src/main/java/com/github/lazylibrary/util/SizeUtils.java)| SizeUtils
  [SqliteUtils](https://github.com/l123456789jy/Lazy/blob/master/lazylibrary/src/main/java/com/github/lazylibrary/util/SqliteUtils.java)| SqliteUtils
  [StreamUtils](https://github.com/l123456789jy/Lazy/blob/master/lazylibrary/src/main/java/com/github/lazylibrary/util/StreamUtils.java)| 流转换成字符串
@@ -51,10 +53,31 @@
  [ViewAnimationUtils](https://github.com/l123456789jy/Lazy/blob/master/lazylibrary/src/main/java/com/github/lazylibrary/util/ViewAnimationUtils.java)|视图动画工具箱，提供简单的控制视图的动画的工具方法
  [ViewUtils](https://github.com/l123456789jy/Lazy/blob/master/lazylibrary/src/main/java/com/github/lazylibrary/util/ViewUtils.java)|view控制
  [WiFiUtil](https://github.com/l123456789jy/Lazy/blob/master/lazylibrary/src/main/java/com/github/lazylibrary/util/WiFiUtil.java)|WiFiUtil
- [WindowUtils](https://github.com/l123456789jy/Lazy/blob/master/lazylibrary/src/main/java/com/github/lazylibrary/util/WiFiUtil.java)|窗口工具箱
+ [WindowUtils](https://github.com/l123456789jy/Lazy/blob/master/lazylibrary/src/main/java/com/github/lazylibrary/util/WindowUtils.java)|窗口工具箱
  [ZipUtil](https://github.com/l123456789jy/Lazy/blob/master/lazylibrary/src/main/java/com/github/lazylibrary/util/ZipUtil.java)|实现的Zip工具
  [BadgeUtil](https://github.com/l123456789jy/Lazy/blob/master/lazylibrary/src/main/java/com/github/lazylibrary/util/BadgeUtil.java)|设置Badge
  [LogUtil](https://github.com/l123456789jy/Lazy/blob/master/lazylibrary/src/main/java/com/github/lazylibrary/util/LogUtil.java)|LogUti工具类
+ [ArrayUtils](https://github.com/l123456789jy/Lazy/blob/master/lazylibrary/src/main/java/com/github/lazylibrary/util/ArrayUtils.java)|数组工具类，提供一些有关数组的便捷方法
+ [ByteUtils](https://github.com/l123456789jy/Lazy/blob/master/lazylibrary/src/main/java/com/github/lazylibrary/util/ByteUtils.java)|字节工具类，提供一些有关字节的便捷方法
+ [CheckAdapter](https://github.com/l123456789jy/Lazy/blob/master/lazylibrary/src/main/java/com/github/lazylibrary/util/CheckAdapter.java)|选择适配器
+[CheckingUtils](https://github.com/l123456789jy/Lazy/blob/master/lazylibrary/src/main/java/com/github/lazylibrary/util/CheckingUtils.java)|提供常用数据验证的工具类，不符合的话就抛异常
+[Countdown](https://github.com/l123456789jy/Lazy/blob/master/lazylibrary/src/main/java/com/github/lazylibrary/util/Countdown.java)|倒计时器
+[DialogUtils](https://github.com/l123456789jy/Lazy/blob/master/lazylibrary/src/main/java/com/github/lazylibrary/util/DialogUtils.java)|对话框工具箱
+[DoubleClickExitDetector](https://github.com/l123456789jy/Lazy/blob/master/lazylibrary/src/main/java/com/github/lazylibrary/util/DoubleClickExitDetector.java)|双击退出识别器
+[ImageProcessor](https://github.com/l123456789jy/Lazy/blob/master/lazylibrary/src/main/java/com/github/lazylibrary/util/ImageProcessor.java)|图片处理器
+[InputMethodUtils](https://github.com/l123456789jy/Lazy/blob/master/lazylibrary/src/main/java/com/github/lazylibrary/util/InputMethodUtils.java)|软键盘工具类
+[LoopTimer](https://github.com/l123456789jy/Lazy/blob/master/lazylibrary/src/main/java/com/github/lazylibrary/util/LoopTimer.java)|循环定时器
+[NestedGridView](https://github.com/l123456789jy/Lazy/blob/master/lazylibrary/src/main/java/com/github/lazylibrary/util/NestedGridView.java)|嵌套使用的GridView
+[NestedListView](https://github.com/l123456789jy/Lazy/blob/master/lazylibrary/src/main/java/com/github/lazylibrary/util/NestedListView.java)|嵌套使用的ListView
+[OSUtils](https://github.com/l123456789jy/Lazy/blob/master/lazylibrary/src/main/java/com/github/lazylibrary/util/OSUtils.java)|Android系统工具箱
+[OtherUtils](https://github.com/l123456789jy/Lazy/blob/master/lazylibrary/src/main/java/com/github/lazylibrary/util/OtherUtils.java)|主要是给字符串添加html
+[ReflectUtils](https://github.com/l123456789jy/Lazy/blob/master/lazylibrary/src/main/java/com/github/lazylibrary/util/ReflectUtils.java)|反射工具类，提供一些Java基本的反射功能
+[RegexUtils](https://github.com/l123456789jy/Lazy/blob/master/lazylibrary/src/main/java/com/github/lazylibrary/util/RegexUtils.java)|正则表达式工具类，提供一些常用的正则表达式
+[SDCardUtils](https://github.com/l123456789jy/Lazy/blob/master/lazylibrary/src/main/java/com/github/lazylibrary/util/SDCardUtils.java)|SD卡工具箱
+[Symbols](https://github.com/l123456789jy/Lazy/blob/master/lazylibrary/src/main/java/com/github/lazylibrary/util/Symbols.java)|常用符号
+[WebViewManager](https://github.com/l123456789jy/Lazy/blob/master/lazylibrary/src/main/java/com/github/lazylibrary/util/WebViewManager.java)|WebView管理器，提供常用设置
+
+
 
 
 ##依赖

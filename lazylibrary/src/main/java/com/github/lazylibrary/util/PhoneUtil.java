@@ -17,8 +17,11 @@ package com.github.lazylibrary.util; /**
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
 import android.net.Uri;
+import android.provider.ContactsContract;
 import android.provider.MediaStore;
+import android.telephony.TelephonyManager;
 import java.io.File;
 
 /**
@@ -27,7 +30,7 @@ import java.io.File;
  * @author jingle1267@163.com
  */
 public final class PhoneUtil {
-    private static long lastClickTime;
+  private static long lastClickTime;
     /**
      * Don't let anyone instantiate this class.
      */
@@ -106,7 +109,7 @@ public final class PhoneUtil {
      * @param activity   上下文
      * @param fileName    生成的图片文件的路径
      */
-    public static void toTakePhoto(int requestcode, Activity activity,String fileName) {
+    public static void toTakePhoto(int requestcode, Activity activity, String fileName) {
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         intent.putExtra("camerasensortype", 2);// 调用前置摄像头
         intent.putExtra("autofocus", true);// 自动对焦
@@ -114,10 +117,7 @@ public final class PhoneUtil {
         intent.putExtra("showActionIcons", false);
         try {//创建一个当前任务id的文件然后里面存放任务的照片的和路径！这主文件的名字是用uuid到时候在用任务id去查路径！
             File file = new File(fileName);
-            if(!file.exists()){//如果这个文件存在就创建一个文件夹！
-                file.mkdirs();
-            }
-            Uri uri = Uri.fromFile(new File(fileName));
+            Uri uri = Uri.fromFile(file);
             intent.putExtra(MediaStore.EXTRA_OUTPUT, uri);
             activity.startActivityForResult(intent, requestcode);
         } catch (Exception e) {
@@ -137,4 +137,26 @@ public final class PhoneUtil {
                 "image/*");
         activity.startActivityForResult(intent, requestcode);
     }
+
+
+    /**
+     * 获取所有联系人的姓名和电话号码，需要READ_CONTACTS权限
+     * @param context 上下文
+     * @return Cursor。姓名：CommonDataKinds.Phone.DISPLAY_NAME；号码：CommonDataKinds.Phone.NUMBER
+     */
+    public static Cursor getContactsNameAndNumber(Context context){
+        return context.getContentResolver().query(
+                ContactsContract.CommonDataKinds.Phone.CONTENT_URI, new String[] {
+                        ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME, ContactsContract.CommonDataKinds.Phone.NUMBER}, null, null, ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME + " COLLATE LOCALIZED ASC");
+    }
+
+    /**
+     * 获取手机号码
+     * @param context 上下文
+     * @return 手机号码，手机号码不一定能获取到
+     */
+    public static String getMobilePhoneNumber(Context context){
+        return ((TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE)).getLine1Number();
+    }
+
 }
